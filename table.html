@@ -1,0 +1,49 @@
+<!-- table.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Saver - Table</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<script src="table.js"></script>
+<h1>Saved Words</h1>
+<table id="wordTable">
+    <thead>
+    <tr>
+        <th>Word</th>
+        <th>Additional Info</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Table rows will be dynamically populated here -->
+    </tbody>
+</table>
+
+<script src="table.js"></script>
+</body>
+</html>
