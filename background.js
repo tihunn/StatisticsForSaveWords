@@ -14,9 +14,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     }
 });
 
-chrome.action.onClicked.addListener(() => {
-    chrome.tabs.create({ url: "popup.html" });
-});
 
 function saveWord(word) {
     chrome.storage.local.get({ words: [] }, (result) => {
