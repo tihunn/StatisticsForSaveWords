@@ -8,7 +8,7 @@
   },
   "content_scripts": [{
     "matches": ["<all_urls>"],
-    "js": ["scripts/content.js"],
+    "js": ["content.js"],
     "run_at": "document_end"
   }],
   "permissions": [
@@ -16,9 +16,9 @@
     "contextMenus"
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup/popup.html"
   },
-  "options_page": "options.html",
+  "options_page": "table/table.html",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",
