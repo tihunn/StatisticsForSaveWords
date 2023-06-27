@@ -24,5 +24,7 @@ document.addEventListener('mouseup', (event) => {
     let selectedText = window.getSelection().toString().trim();
 
     // Send a message to the background script
-    chrome.runtime.sendMessage({ action: 'saveWord', word: selectedText });
+    if (typeof selectedText === "string") {
+        chrome.runtime.sendMessage({action: 'saveWord', word: selectedText});
+    }
 });
