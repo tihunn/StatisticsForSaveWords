@@ -1,12 +1,12 @@
 // table.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    chrome.storage.local.get('words', (result) => {
-        let words = result.words || [];
+    chrome.storage.local.get('tableWords', (result) => {
+        let words = result.tableWords || [];
 
         let tableBody = document.getElementById('wordTable').getElementsByTagName('tbody')[0];
 
-        words.forEach( (word) => {
+        words.forEach( (rowWord) => {
             let row = document.createElement('tr');
             let markCell = document.createElement('td')
             let wordCell = document.createElement('td');
@@ -17,7 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
             let firstAddCell = document.createElement('td')
             let allTimeCell = document.createElement('td')
 
-            wordCell.textContent = word;
+            markCell.textContent = rowWord.mark;
+            wordCell.textContent = rowWord.word;
+            numRepCell.textContent = rowWord.numRep;
+            lvlRepeatCell.textContent = rowWord.lvlRepeat;
+            timeUpdateCell.textContent = rowWord.timeUpdate;
+            firstAddCell.textContent = rowWord.firstAdd;
+
 
             row.appendChild(markCell);
             row.appendChild(wordCell);
